@@ -3,16 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/base": "^5.0.0-alpha.88",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.8.7",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.43",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.6",
+    "graphql": "^16.5.0",
+    "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-window": "^1.8.7",
+    "sass": "^1.53.0",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
@@ -20,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "codegen": "graphql-codegen --config codegen.yml",
+    "gen:types": "npx apollo client:codegen --target typescript --includes **/gql.ts --excludes **/__generated__"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +50,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.7.0",
+    "@graphql-codegen/typescript": "2.6.0",
+    "@graphql-codegen/typescript-operations": "2.4.3",
+    "@graphql-codegen/typescript-react-apollo": "3.2.17",
+    "@testing-library/react": "^13.3.0",
+    "@types/graphql": "^14.5.0",
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/react-window": "^1.8.5",
+    "apollo": "^2.34.0"
   }
 }

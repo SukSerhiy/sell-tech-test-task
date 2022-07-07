@@ -1,0 +1,10 @@
+overwrite: true
+# schema: "http://152.228.215.94:81/api"
+schema: "schema.graphql"
+# documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
